@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvbx3kotn2ksf"]
+
+[ext_resource type="Texture2D" uid="uid://cbf8waqy0cqu7" path="res://iso_tileset.png" id="1_4rnbt"]
+[ext_resource type="Script" path="res://TileMap.gd" id="2_ka86q"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6bcn"]
+texture = ExtResource("1_4rnbt")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -8)
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, -8)
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 16, 0, 0, 8, -16, 0)
+2:0/0 = 0
+2:0/0/texture_origin = Vector2i(0, -8)
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, -8)
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 8, 15.1875, 15.5, -0.6875, 24, -15.4375, 16.5)
+4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, -8)
+4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+4:0/0/physics_layer_0/angular_velocity = 0.0
+5:0/0 = 0
+5:0/0/texture_origin = Vector2i(0, -8)
+5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:0/0/physics_layer_0/angular_velocity = 0.0
+6:0/0 = 0
+6:0/0/texture_origin = Vector2i(0, -8)
+6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/texture_origin = Vector2i(0, -8)
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 16, 0, 0, 8, -16, 0)
+
+[sub_resource type="TileSet" id="TileSet_gwppw"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_p6bcn")
+
+[node name="TileMap" type="TileMap"]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_gwppw")
+format = 2
+layer_0/name = "level0"
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(1, 131072, 0, 2, 65536, 0, 3, 65536, 0, 65537, 131072, 0, 65538, 131072, 0, 65539, 131072, 0, -65535, 131072, 0, -65534, 196608, 0, -65533, 65536, 0, -131069, 131072, 0, -196605, 131072, 0, -196604, 131072, 0, -131068, 131072, 0, -131067, 131072, 0, -65532, 131072, 0, -65531, 131072, 0, 5, 131072, 0, 65541, 131072, 0, 4, 131072, 0, 65540, 131072, 0, -196603, 131072, 0)
+layer_1/name = "level1"
+layer_1/y_sort_enabled = true
+layer_1/y_sort_origin = 1
+layer_1/z_index = 1
+layer_1/tile_data = PackedInt32Array(-131071, 196608, 0, -131072, 196608, 0, -65536, 196608, 0, -196605, 196608, 0)
+layer_2/name = "level2"
+layer_2/y_sort_enabled = true
+layer_2/y_sort_origin = 2
+layer_2/z_index = 2
+layer_2/tile_data = PackedInt32Array()
+script = ExtResource("2_ka86q")
