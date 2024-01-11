@@ -3,18 +3,17 @@
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_32eov"]
 [ext_resource type="Texture2D" uid="uid://beytcdjjkq6j" path="res://icon.svg" id="2_hqxkg"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yi3m8"]
-radius = 33.0151
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5k3py"]
+size = Vector2(50, 38)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 z_index = 1
 y_sort_enabled = true
-scale = Vector2(0.2, 0.2)
 script = ExtResource("1_32eov")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_hqxkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 32)
-shape = SubResource("CircleShape2D_yi3m8")
+position = Vector2(8.34465e-07, 32)
+shape = SubResource("RectangleShape2D_5k3py")

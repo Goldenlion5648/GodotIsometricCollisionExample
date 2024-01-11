@@ -1,15 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwo5n4s0u5xig"]
+[gd_scene load_steps=4 format=3 uid="uid://dwo5n4s0u5xig"]
 
+[ext_resource type="Script" path="res://Camera2D.gd" id="1_eq3un"]
 [ext_resource type="PackedScene" uid="uid://dvbx3kotn2ksf" path="res://tile_map.tscn" id="1_mcefc"]
 [ext_resource type="PackedScene" uid="uid://c206tmol63adq" path="res://character_body_2d.tscn" id="2_w34uf"]
 
 [node name="main" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(93, 5)
-zoom = Vector2(3, 3)
-
 [node name="TileMap" parent="." instance=ExtResource("1_mcefc")]
+layer_0/tile_data = PackedInt32Array(1, 196608, 2, 65538, 196608, 2, 65539, 196608, 2, 65540, 196608, 2, 3, 131072, 65536, -131069, 196608, 2, -196605, 196608, 2, -196604, 196608, 2, -131068, 196608, 2, -65532, 196608, 2, 4, 196608, 2, 65541, 196608, 2, 5, 196608, 2, -65531, 196608, 2, -131067, 196608, 2, -196603, 196608, 2, 65537, 196608, 2, 2, 131072, 65536, -65534, 196608, 2, -65533, 131072, 65536, -65535, 196608, 2)
+layer_1/tile_data = PackedInt32Array(-196605, 262144, 65538, -131072, 262144, 2, -65536, 262144, 65538, -131071, 262144, 65538)
 
 [node name="CharacterBody2D" parent="TileMap" instance=ExtResource("2_w34uf")]
-position = Vector2(90, 34)
+position = Vector2(92, 39)
+scale = Vector2(0.2, 0.2)
+
+[node name="Camera2D" type="Camera2D" parent="TileMap/CharacterBody2D"]
+position = Vector2(-60, -35)
+scale = Vector2(1e-05, 1e-05)
+ignore_rotation = false
+zoom = Vector2(3, 3)
+script = ExtResource("1_eq3un")
+min_zoom = Vector2(0.1, 0.1)
+max_zoom = Vector2(5, 5)
